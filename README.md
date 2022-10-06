@@ -34,11 +34,11 @@ If `strict mode` is not posibble, then unit tests should cover this situation.
 
 ### Migrate to strict mode
 [TODO] 
-- create, commit and push one branch and apply the "old" configuration
+- create, commit and push one branch and apply the "*old*" configuration
 - create, commit and push another branch set in full strict mode and describe steps for this configuration
-- create a new local branch base one the "old" configuration and add a component implementing proof examples
+- create a new local branch base one the "*old*" configuration and add a component implementing proof examples
 > Compilation should be successful on this branch, but not when switching to the strict one;
-- creaate a new local branch based on the "strict" one, add the same component adapted to strict mode
+- create a new local branch based on the "strict" one, add the same component adapted to strict mode
 > Compilation should be successful.
 
 ## FAQ
