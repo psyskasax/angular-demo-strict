@@ -1,27 +1,54 @@
 # AngularDemoStrict
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+The purpose of this projects (and its branches) is to show the avantages of strict mode in Angular.  
+## Projet  
+The most common object every developer may have to deal with is a person.  
+Let's define: 
+- a person
+- a person **may have one to many (0-N)** addresses  
+- a person **has at least one (1-N)** role  
 
-## Development server
+Presentation: 
+- there should be a page allowing to search for user(s) (form + list)
+- there should be a page displaying the detailed info for a selected user and there role(s)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Branches
+### Main
+`ng new` avec  
+Angular CLI: 13.3.9  
+Node: 16.14.2  
+Package Manager: npm 8.7.0  
 
-## Code scaffolding
+## Test cases
+### Function with "Object type" parameter defined as any
+- may be an unexpected object type
+- may be null
+- may be undefined
+- may miss a property  
+- may not be available _YET_  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+> Should not compile using stric mode  
 
-## Build
+The point is to make sure that, in real life, the final user will be able to react in that case.
+If `strict mode` is not posibble, then unit tests should cover this situation.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Migrate to strict mode
+[TODO] 
+- create, commit and push one branch and apply the "*old*" configuration
+- create, commit and push another branch set in full strict mode and describe steps for this configuration
+- create a new local branch base one the "*old*" configuration and add a component implementing proof examples
+> Compilation should be successful on this branch, but not when switching to the strict one;
+- create a new local branch based on the "strict" one, add the same component adapted to strict mode
+> Compilation should be successful.
 
-## Running unit tests
+## FAQ
+### Why wouldn't `strict mode` be possible ?
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Because the project was initiated without it. Developers may need to follow the original stratedy to prevent the app from being unusable. To guarantee robustness and prevent regressions, unit tests are much recommanded.  
+> Want to see who it would look like with unit testing instead of strict mode? Switch to branch unit-testing
 
-## Running end-to-end tests
+### Why is one (strict mode) or the other (unit testing) important?  
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- to guarantee robustness of the application (further to the ability to run restricted operations, the front side of the app is dedicated to the user and to grant them the most possible comfortable experience)
+- to help fellow developers make sure the component is still working after their modifications  
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
