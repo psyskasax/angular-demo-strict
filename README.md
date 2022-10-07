@@ -20,7 +20,7 @@ Node: 16.14.2
 Package Manager: npm 8.7.0  
 
 ## Test cases
-### Funcion with "Object type" parameter defined as any
+### Function with "Object type" parameter defined as any
 - may be an unexpected object type
 - may be null
 - may be undefined
