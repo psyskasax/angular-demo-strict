@@ -8,6 +8,7 @@
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -21,7 +22,37 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "removeComments": true,
+    "paths": {
+      "@core/environment": [
+        "src/environments/environment"
+      ],
+      "@core/auth": [
+        "src/app/core-services/auth"
+      ],
+      "@core/api": [
+        "src/app/core-services/api"
+      ],
+      "@core/store": [
+        "src/app/core-services/store"
+      ],
+      "@core/reservations": [
+        "src/app/core-services/reservations"
+      ],
+      "@core/local-storage": [
+        "src/app/core-services/local-storage"
+      ],
+      "@core/offline": [
+        "src/app/core-services/offline"
+      ],
+      "@core/layout": [
+        "src/app/core-declarations/layout"
+      ],
+      "@core/slideshow": [
+        "src/app/core-declarations/slideshow"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
